@@ -12,13 +12,24 @@ const App = () => {
 
     return (
         <main>
+            {/* Navbar with cart and cartOpen state */}
             <Navbar cart={cart} setCartOpen={setCartOpen} />
+            
+            {/* Static and dynamic content */}
+            <div className="container mx-auto p-4">
+               
+                
+                    
+                
+            </div>
+            
             <Hero />
             <Services />
             <FeatureProducts setCart={setCart} />
             <Footer />
             
-            {cartOpen && <Cart cart={cart} setCartOpen={setCartOpen} setCart={setCart} />} {/* Pass setCart to Cart */}
+            {/* Conditionally render the Cart component */}
+            {cartOpen && <Cart cart={cart} setCartOpen={setCartOpen} setCart={setCart} />}
         </main>
     );
 }
